@@ -15,13 +15,4 @@ demo introducing for game and win the Smwm Luckydraw Promotion play its free for
 1- https://tfmzsufju7.ailandingpage.ai/
 2- 2- Smwm Lucky draw Promotion link 
  
-https://tfmzsufju7.ailandingpage.ai
-3- link advance 
-https://tfmzsufju7.ailandingpage.ai
-4-
-
-https://tfmzsufju7.ailandingpage.ai
-
-https://tfmzsufju7.ailandingpage.ai
-
 Smwm Lucky draw Promotion link 
