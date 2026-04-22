@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "Lucky Draw Winner Announcement",
+        "content": "Congratulations to our lucky winner! Check back for more details.",
+        "date": "2024-04-22",
+        "published": true
+    },
+    {
+        "id": 2,
+        "title": "New Promotion Starting Soon",
+        "content": "Stay tuned for our upcoming music promotion event.",
+        "date": "2024-04-23",
+        "published": false
+    }
+]
