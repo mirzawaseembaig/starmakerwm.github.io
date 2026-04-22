@@ -3,26 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starmakerwm.com - Smwm Lucky Draw Promotion</title>
+    <title>Starmakerwm.com - Music Tracks, Events & Competitions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        
+        /* Header/Hero Section */
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
         }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        header .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        header p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff5252;
+        }
+        
+        /* Container */
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
+        
+        /* About Us Section */
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 4rem 2rem;
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-highlights {
+            margin-top: 2rem;
+            padding: 2rem;
+            background-color: white;
+            border-left: 4px solid #ff6b6b;
+            border-radius: 5px;
+        }
+        
+        .about-highlights h3 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+        
+        .about-highlights ul {
+            list-style: none;
+        }
+        
+        .about-highlights li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .about-highlights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 4rem 2rem;
+        }
+        
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #667eea;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Promotion Section */
         .promotion {
             background-color: white;
             padding: 2rem;
@@ -30,55 +236,204 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
+        
+        .promotion h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .draws-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
         .draw {
-            margin-bottom: 1.5rem;
-        }
-        .draw h3 {
-            color: #007bff;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
             color: white;
+            text-align: center;
+        }
+        
+        .draw h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .draw p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Join Section */
+        .join-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e72 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+        
+        .join-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .join-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="starmakerwm logo.png" alt="Starmakerwm Logo" style="max-width: 200px; height: auto;">
-        <h1>Welcome to Starmakerwm.com</h1>
-        <p>Your hub for music tracks, online store, stories, news publishing, and live broadcasting</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎵 SMWM</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#promotion">Lucky Draw</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Header/Hero Section -->
+    <header id="home">
+        <div class="header-content">
+            <img src="starmakerwm logo.png" alt="Starmakerwm Logo">
+            <h1>Welcome to Starmakerwm.com</h1>
+            <p>Where Creativity Meets Competition in the World of Music</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
     </header>
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Starmakerwm.com</h2>
+                <p>We are a proud division of <strong>Starmaker.com</strong>, dedicated to revolutionizing the music industry through innovation, creativity, and community engagement. Since our inception, we have been committed to nurturing talent and providing opportunities for aspiring and established musicians.</p>
+                
+                <p>Our mission is to create a vibrant ecosystem where musicians can create, compete, and celebrate their achievements. We believe music is a universal language that brings people together, and we're here to amplify every voice.</p>
+                
+                <div class="about-highlights">
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><strong>Music Track Creation:</strong> Provide professional tools and resources for artists to produce and distribute their music</li>
+                        <li><strong>Event Management:</strong> Host engaging musical events, concerts, and showcase performances</li>
+                        <li><strong>Competitions:</strong> Organize music competitions that challenge and inspire artists at all levels</li>
+                        <li><strong>Certification Programs:</strong> Award recognized Music Level Certificates to showcase achievement and skill progression</li>
+                        <li><strong>Community Building:</strong> Foster connections between musicians, producers, and music enthusiasts worldwide</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <img src="starmakerwm logo.png" alt="About Us Image" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🎹 Music Track Creation</h3>
+                <p>Create, produce, and upload your original music tracks. Access professional tools and resources to bring your musical vision to life.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🎤 Events & Concerts</h3>
+                <p>Experience live performances and attend exclusive musical events. Connect with other musicians and music lovers in vibrant community gatherings.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏆 Competitions</h3>
+                <p>Showcase your talent in our competitive events. Win prizes, gain recognition, and challenge yourself against other talented musicians.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>📜 Certification Program</h3>
+                <p>Earn recognized Music Level Certificates that validate your skills and progression. Build your professional portfolio with our credentials.</p>
+            </div>
+        </div>
+    </section>
+    
     <div class="container">
-        <div class="promotion">
-            <h2>The Smwm Lucky Draw Promotion</h2>
-            <p>Join our worldwide lucky draw program and stand a chance to win amazing prizes! Anyone can participate and win the bumper prize.</p>
-            <p>Demo link: <a href="https://tfmzsufju7.ailandingpage.ai/" target="_blank">https://tfmzsufju7.ailandingpage.ai/</a></p>
+        <!-- Join Us Call to Action -->
+        <div class="join-section" id="join">
+            <h2>Join The Starmakerwm Community</h2>
+            <p>Be part of a global movement celebrating music, talent, and creativity. Whether you're an aspiring artist or a seasoned professional, there's a place for you here.</p>
+            <a href="#contact" class="cta-button">Join Us Today</a>
+        </div>
+        
+        <!-- Promotion Section -->
+        <div class="promotion" id="promotion">
+            <h2>🎁 The Smwm Lucky Draw Promotion</h2>
+            <p>Join our worldwide lucky draw program and stand a chance to win amazing prizes! This is our way of rewarding our community members. Anyone can participate and win the bumper prize.</p>
+            <p><strong>Want to learn more?</strong> Check out our demo: <a href="https://tfmzsufju7.ailandingpage.ai/" target="_blank" style="color: #ff6b6b;">https://tfmzsufju7.ailandingpage.ai/</a></p>
             
-            <div class="draw">
-                <h3>Bronze Draw</h3>
-                <p>Membership Price: $1</p>
-                <p>Winner Prize: $100</p>
+            <div class="draws-grid">
+                <div class="draw">
+                    <h3>📱 Bronze Draw</h3>
+                    <p><strong>Membership:</strong> $1</p>
+                    <p><strong>Prize:</strong> $100</p>
+                </div>
+                
+                <div class="draw">
+                    <h3>💎 Silver Draw</h3>
+                    <p><strong>Membership:</strong> $5</p>
+                    <p><strong>Prize:</strong> $500</p>
+                </div>
+                
+                <div class="draw">
+                    <h3>👑 Golden Draw</h3>
+                    <p><strong>Membership:</strong> $10</p>
+                    <p><strong>Prize:</strong> $1000</p>
+                </div>
             </div>
             
-            <div class="draw">
-                <h3>Silver Draw</h3>
-                <p>Membership Price: $5</p>
-                <p>Winner Prize: $500</p>
-            </div>
-            
-            <div class="draw">
-                <h3>Golden Draw</h3>
-                <p>Membership Price: $10</p>
-                <p>Winner Prize: $1000</p>
-            </div>
-            
-            <p>Coming up next: A program for the lucky draw and lottery promotion by our prime members, promoters, and sponsors.</p>
+            <p style="margin-top: 2rem; background-color: #f9f9f9; padding: 1rem; border-radius: 5px;"><strong>Coming Soon:</strong> An enhanced program for the lucky draw and lottery promotion by our prime members, promoters, and sponsors worldwide!</p>
         </div>
     </div>
+    
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Starmakerwm.com. All rights reserved. Owner: Mirza Waseem Baig</p>
+        <p>&copy; 2026 Starmakerwm.com - A Division of Starmaker.com</p>
+        <p>All rights reserved | Owner: Mirza Waseem Baig</p>
+        <p>Email: bluemoon132@gmail.com | <a href="https://www.starmakerwm.com/" target="_blank" style="color: #ff6b6b;">www.starmakerwm.com</a></p>
     </footer>
 </body>
 </html>
