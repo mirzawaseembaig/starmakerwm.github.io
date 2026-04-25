@@ -59,10 +59,11 @@ Create 3 ad units (one for each ad placement):
 - Name: `Bottom Banner Ad`
 - Format: **Banner** or **Auto**
 - Copy your **Ad Unit ID**ca-app-pub-2137218144171359/8995232382
+-copy your #4 interstial ad **ad unit ID ** ID ** ca-app-pub-2137218144171359/8628400874
 
 ### Step 4: Get Your Publisher ID
 - On AdMob dashboard, find your **Publisher ID**
-- Format: `ca-pub-xxxxxxxxxxxxxxxx` (16 digits after "ca-pub-")
+- Format: `Publisher ID:   ca-pub-ca-app-pub-2137218144171359~7735181090` (16 digits after "ca-pub-")
 
 ---
 
@@ -75,7 +76,7 @@ Publisher ID:        ca-pub-ca-app-pub-2137218144171359~7735181090
 Ad Slot ID #1:       ______________________
 Ad Slot ID #2:       ______________________
 Ad Slot ID #3:       ______________________
-```
+```ad slot id #4 : ca-app-pub-2137218144171359/8628400874
 
 ### Option A: I Can Do It For You! (Easiest)
 Simply provide me with:
